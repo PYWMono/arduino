@@ -26,11 +26,11 @@ void setup() {
 }
 
 void loop() {
-  for (int count = 0; count <= 100; count++) {
+  for (int count = 0; count < 100; count++) {
     set_duty(count);
     blinking();
   }
-  for (int count = 100; count >= 0; count--) {
+  for (int count = 100; count > 0; count--) {
     set_duty(count);
     blinking();
   }
