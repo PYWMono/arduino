@@ -13,9 +13,9 @@ void set_duty(int duty) {
 
 void blinking() {
   for(int cnt = 0; cnt <= 5000/E_period; cnt++) {
-    digitalWrite(led, LOW);
-    delayMicroseconds(E_period*E_duty/100);
     digitalWrite(led, HIGH);
+    delayMicroseconds(E_period*E_duty/100);
+    digitalWrite(led, LOW);
     delayMicroseconds(E_period*(100-E_duty)/100);
   }
 }
